@@ -1,6 +1,3 @@
-import KanbanAPI from "./api/KanbanAPI.js";
-
-
 // Set the element need to return which is used as selecting button
 let items=document.querySelectorAll('.item');
 
