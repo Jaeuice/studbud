@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'navicon';
+    font-family: 'ownIcon';
     src:  url('../fonts/font.eot');
     src:  url('../fonts/font.eot') format('embedded-opentype'),
       url('../fonts/font.ttf') format('truetype'),
@@ -12,7 +12,7 @@
   
   [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'navicon' !important;
+    font-family: 'ownIcon' !important;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -24,6 +24,9 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
+  .icon-noun-clear:before {
+    content: "\e907";
+  }
   .icon-noun-dictionary:before {
     content: "\e900";
   }
