@@ -1,0 +1,196 @@
+@import "font.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Bely;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #01415B ;
+}
+
+.container{
+    width:423px;
+    background-color: aliceblue;
+    border-radius: 3px;
+    padding:27px 28px 45px;
+}
+
+.container header{
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.container .searchbox{
+    position: relative;
+    margin: 35px 0 18px;
+
+}
+
+.searchbox input{
+    height: 53px;
+    width: 100%;
+    outline: none;
+    padding: 0 42px;
+    border-radius: 3px;
+    border:1px solid #01415B
+}
+
+
+.searchbox i{
+    position: absolute;
+    top:35%;
+    color: rgba(0,0,0,0.5);
+    left: 15px;
+    font-size:20px;
+    pointer-events: none;
+}
+
+.searchbox span{
+    position: absolute;
+    top: 34%;
+    color: rgba(0,0,0,0.5);
+    right: 15px;
+    font-size:20px;
+    display: none; /* Make clear button undisplayed while not typing*/
+
+}
+
+/* When mouse pass the box make it more atrractive*/
+.searchbox input:focus{
+    padding: 0 41px;
+    border: 2px solid #005148;
+}
+
+/* When clicking the searching box, let the icon keep same colour with the searchbox border*/
+.searchbox input:focus ~i{
+    color:#005148;
+    font-weight: 800;
+}
+
+/*Set about the deleting button, while typing the clear button displays*/
+.searchbox input:valid ~span{
+    display: block;
+}
+
+.container ul li{
+    display: flex;
+    margin-bottom:15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    /*justify-content: space-between*/
+}
+
+/*Setting the font of targeted words*/
+ul .words p{
+    font-size: 24px;
+    font-weight: 700;
+}
+/*Setting the font of pronuciation of the searched word*/
+ul .words span{
+    font-size: 11px;
+    color:rgba(0,0,0,0.7)
+
+}
+
+ /* Set the 'Defintion' bolder */
+.content li .meaning p{
+    font-weight: bolder;
+}
+
+/* Set the detailed phrase ocupacity lighter*/
+.content li .meaning span{
+    color: rgba(0,0,0,0.6);
+}
+
+.synonyms .meaning .list{
+    display: flex;
+}
+
+/* Set the 'Synonyms' bolder */
+.synonyms .example p{
+    font-weight: bolder;
+}
+
+/* Set the 'Synonyms' content ocupacity lighter  */
+.synonyms .example span{
+    color: rgba(0,0,0,0.6);
+}
+
+/* Set the definiton box and synonyms box more attrcative with colorful border*/
+.meaning{
+    padding-left: 10px;
+    padding-left: 10px;
+    border-left: 3px solid #01415B;
+}
+.example{
+    padding-left: 10px;
+    padding-left: 10px;
+    border-left: 3px solid #01415B;
+}
+
+/* Set the synonyms color. While user mouse pass the word, it will change the color.*/
+.wordslist span{
+    word-spacing:auto;
+}
+.wordslist span:hover{
+    color: #005148;
+    font-weight: bold;
+}
+
+/* Set the space size below the synonyms box*/
+.container ul li:last-child{
+    border-bottom:0;
+    margin-bottom:0;
+    padding-bottom:0;
+}
+
+/* Set all the search research undispalyed */
+/* Set the dropdown list of research results*/
+.container ul{
+    overflow:hidden; /* Hide the overwhalming content*/
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-timing-function: ease-in;
+    height: 0;
+    opacity: 0;
+    /*display: none*/;
+}
+
+/* Add a new class for searching results*/
+.container.active ul{
+    height: 220px;
+    opacity: 100%;
+    /*display: block;*/
+
+}
+
+/* Set the hint sentence font*/
+.container .hint {
+    margin-top:45px;
+    font-size: 14px;
+    color: rgba(0,0,0,0.6);
+}
+
+/* Set the font of hint sentense while entrying */
+.container .hint span{
+    color: #005148;
+    font-weight:bolder;
+}
+
+.container.active .hint{
+    display: none;
+}
+
+/* Add the scrollbar for the dropdown list*/
+ul .content{
+    max-height:200px;
+    overflow-y: auto;
+}

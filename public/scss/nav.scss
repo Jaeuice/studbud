@@ -45,7 +45,11 @@
   }
   
   /* Set navigation bar */
-  
+  .left-nav a{
+    text-decoration: none;
+    color:#ffff;
+  }
+
   .left-nav li{
     height: 46px;
     display: flex;   

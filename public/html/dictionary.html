@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>Dictionary page</title>
+    <link rel="stylesheet" href="../scss/dictionary.scss">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  </head>
+
+  <body>
+      <div class="container">
+        <header>Studbud Dictionary</header>
+        <div class="searchbox">
+            <input type="text" placeholder="Type your word" required>
+            <i class="icon icon-noun-search"></i>
+            <span class="icon icon-noun-clear"></span>
+        </div>
+
+<!--Hint sentence for users to clearly show them the searching phase-->
+        <p class="hint">Are you looking for any word? Type it!🙇🏻</p>
+
+        <ul>
+            <li class="words">
+                <div class="details">
+                    <p></p>
+                    <span></span>
+                </div>
+            </li>
+            <div class="content">
+                <li class="definition">
+                    <div class="meaning">
+                        <p>Definition</p>
+                        <span></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="synonyms">
+                        <div class="example">
+                            <p>Synonyms</p>
+                            <div class="wordslist"></div>
+                        </div>
+                    </div>
+                </li>
+            </div>
+        </ul>
+      </div>
+      <script src="../js/dictionary.js" type="module"></script>
+  </body>
+
