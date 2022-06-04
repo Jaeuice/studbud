@@ -1,0 +1,281 @@
+@import "../scss/music_font.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bely", sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #01415B;
+}
+  
+.container{
+    width: 380px;
+    padding: 25px 30px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgba(240,248,255,0.2); /* Set the player background color*/
+}
+
+
+/* Set the album */
+/* Set the mouse format
+.container i{
+    cursor: pointer;
+  }*/
+
+
+/*.progress .duration, 
+  .controller, .mlist .header, .mulist ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }*/
+  
+.album-pic{
+    max-width: 340px;
+    max-height: 340px;
+    overflow: hidden;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+.album-pic img{
+    max-width: 100%;
+    max-height: 100%;
+    display:block;
+    margin:auto;
+}
+.content{
+    margin-top: 30px;
+}
+
+  /* Set the music name and artist name font color*/
+.content p{
+    color:#ffffff;
+}
+
+/* Set the font of the music title as bolder font of BELY font*/
+.content .name{
+    font-size: 30px;
+    font-family: 'Bely display';
+    padding-bottom: 10px;
+}
+
+/* Set the artist name font more lighter*/
+.content .artist{
+    font-size: 18px;
+    opacity: 0.6;
+    padding-bottom: 20px;
+}
+
+/* Set the basic format of whole progress */
+.progress{
+    width: 100%;
+    height: 6px;
+    border-radius: 45px;
+    background: rgba(255,255,255,0.3);
+    cursor: pointer;/* Set the mouse passing format*/
+}
+
+ /* Set the progress bar color which presents the time duration of one music*/
+.progress .bar{
+    width: 0%;
+    height: 6px;
+    border-radius: 45px;
+    position: relative;
+    background: rgba(255,255,255,0.6);
+}
+
+
+/* Add the circle point to present the progress*/
+.bar::before{
+    content: "";
+    position: absolute;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    top: 50%;
+    right: -5px;
+    /*z-index: 2;*/
+    opacity: 0; /* initial point opacity is 0*/
+    pointer-events: none;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.6);
+    transition: opacity 0.1s linear;/* Transition setting*/
+}
+
+.progress:hover .bar::before{
+    opacity: 1; /* final point opacity is 1*/
+    pointer-events: auto;
+}
+
+
+.progress .duration{
+    margin-top: 3px; /* Set the space between time display and bar*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Set the time display format*/
+.duration span{
+    font-size: 13px;
+    color: rgba(240,248,255,0.4);
+}
+
+/*.duration .end{
+    margin: 0 85%;
+    
+}*/
+  
+.controller{
+    margin: 40px 0 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Set the button basic format*/
+.controller i{
+    font-size: 28px;
+    user-select: none;
+    
+}
+
+/* Set the button clip */
+.controller i{
+    background-clip: text; /* Cut the background as the edge of icon */
+    color:#ffffff; /* Set the icon color*/
+}
+
+
+/*.controller i:nth-child(2),
+.controller i:nth-child(4){
+    font-size: 42px;
+}
+*/
+
+#previous{
+    font-size: 200%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#next{
+    font-size: 200%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Set pause and play button*/
+
+.pp i{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:#ffffff;
+    position: relative;
+    /* Set the size*/
+    margin:0;
+    padding: 0;
+    font-size: 400%;
+    
+
+}
+
+/* Set the left and right icon lighter and smaller*/
+#repeat, #mlist{
+    font-size: 100%;
+    color: rgba(255,255,255,0.6);
+    cursor:pointer;
+}
+
+
+
+
+/*Music list*/
+.list{
+    position: relative;
+    background: #ffffff;
+    width: 100%;
+    left: 0;
+    bottom: -55%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0px -5px 10px rgba(0,0,0,0.1);
+    transition: all 0.15s ease-out;
+}
+  .list.show{
+    bottom: 0;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header .list_title{
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    color: var(--lightblack);
+  }
+  .header .list_title i{
+    cursor: default;
+  }
+  .header .list_title span{
+    margin-left: 5px;
+  }
+  .header #close{
+    font-size: 22px;
+    color: var(--lightblack);
+  }
+  .mlist ul{
+    margin: 10px 0;
+    max-height: 260px;
+    overflow: auto;
+  }
+  .mlist ul::-webkit-scrollbar{
+    width: 0px;
+  }
+  .mlist ul li{
+    list-style: none;
+    display: flex;
+    cursor: pointer;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    color: var(--lightblack);
+    border-bottom: 1px solid #E5E5E5;
+  }
+  .mlist ul li:last-child{
+    border-bottom: 0px;
+  }
+  .mlist ul li .list_title span{
+    font-size: 17px;
+  }
+  .mlist ul li .list_title p{
+    opacity: 0.9;
+  }
+  ul li .audio-duration{
+    font-size: 16px;
+  }
+  ul li.playing{
+    pointer-events: none;
+    color: var(--violet);
+  }
+  

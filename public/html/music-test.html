@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Music player page</title>
+    <link rel="stylesheet" href="../scss/music-test.scss">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">              
+  </head>
+
+  <body>
+      <div class="container">
+          <!-- For album picture-->
+          <div class="album-pic">
+            <img :src="" alt="albumPic" />
+          </div>
+
+          <!-- For music detailed information-->
+          <div class="content">
+              <p class="name"></p>
+              <p class="artist"></p>
+          </div>
+
+          <!-- For progress bar-->
+          <div class="progress">
+              <div class="bar">
+                  <audio id="songs" :src=""></audio>
+              </div>
+              <div class="duration">
+                  <span class="now">0:00</span>
+                  <span class="end">0:00</span>
+              </div>
+          </div>
+
+          <!-- For controller-->
+          <div class="controller">
+              <i id="repeat" class="icon icon-repeat" ></i>
+              <i id="previous" class="icon icon-skip_previous"></i>
+              <div class="pp"><!-- Play and Pause button class-->
+                <i id="pplay" class="icon icon-play_circle_outline" ></i>
+              </div> 
+              <i id="next" class="icon icon-skip_next" ></i>
+              <i id="mlist" class="icon icon-playlist" ></i>
+          </div>
+
+          <!-- For music list-->
+          <div class="list">
+              <div class="header">
+                  <div class="list_title">
+                    <i class="icon icon-playlist" ></i>
+                    <span>List</span>
+                  </div>
+
+                  <i id="close" class="icon icon-close"></i>
+              </div>
+          </div>
+          <ul>
+            <li>
+              <div class="musicInfo">
+                <span>Sleepless</span>
+                <p>Audio file</p>
+              </div>
+              <span class="OMGduration">3:40</span>
+            </li>
+          </ul>
+      </div>
+
+      <script src = '../js/music-test.js' ></script>
+
+  </body>
+
+</html>
