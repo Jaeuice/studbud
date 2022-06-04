@@ -80,7 +80,6 @@ function loadMusic(index) {
   //songs.src = `../songs/${mySongs[index - 1].audio}.mp3`;
   mPic.src = "../image/"+mySongs[index - 1].img+".jpg";
   songs.src = "../songs/"+mySongs[index - 1].img+".mp3";
-  let 
   console.log(mTit.innerText);
   console.log(mPpl.innerText);
   console.log(mySongs[index - 1])
