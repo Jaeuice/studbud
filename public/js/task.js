@@ -1,15 +1,17 @@
-add.addEventListener("click",newElement())
-function closeuButton() {
-      var myNodelist = document.getElementsByTagName("li");
-      for (i = 0; i < myNodelist.length; i++) {
+const wrapper = document.querySelectorAll(".task ul");
+const ownList = document.getElementsByTagName("li");
+
+function closeButton() {
+      for (i = 0; i < ownList.length; i++) {
         var span = document.createElement("span");
         var txt = document.createTextNode("\u00D7"); 
         span.className = "close";
         span.appendChild(txt);
-        myNodelist[i].appendChild(span);
+        ownList[i].appendChild(span);
     }
 }
-  
+
+
 function closeElement() {
       var close = document.getElementsByClassName("close");
       for (i = 0; i < close.length; i++) {
@@ -44,7 +46,7 @@ function newElement() {
     }
 
     function initList() {   
-      closeBtn();
+      closeButton();
       closeElement();
       ifChecked();
     }
@@ -55,10 +57,10 @@ function init() {
     var addButton = document.getElementById("addBtn"); 
     initList();
 
+//Click on the button add line
 addButton.onclick = function() {
     newElement();
     initList();
       }
 
-init();
-  
+ init(); }

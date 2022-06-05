@@ -155,7 +155,7 @@ ul .words span{
 /* Set all the search research undispalyed */
 /* Set the dropdown list of research results*/
 .container ul{
-    overflow:hidden; /* Hide the overwhalming content*/
+    /* Hide the overwhalming content*/
     transition-duration: 0.3s;
     transition-property: all;
     transition-timing-function: ease-in;
@@ -194,3 +194,4 @@ ul .content{
     max-height:200px;
     overflow-y: auto;
 }
+
