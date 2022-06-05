@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pomodoro Clock</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+
+    <link rel="stylesheet" href="../scss/pomodoro.scss">
+</head>
+
+<body ng-app="pomodoroApp">
+
+<div class="trytry">
+<section class="text-center pomodoro-clock-body" ng-controller="ClockCtrl">
+    <div class="clock-timer">
+        {{timeLeft | date: "mm:ss"}}
+    </div>
+
+    <div class="clock-buttons">
+        <button role="button" class="btn btn-primary btn-lg js-clock-on-off-button" ng-click="clockOnOff()">{{onOffButtonText}}</button>
+        <button role="button" class="btn btn-default btn-lg js-clock-reset-button" ng-click="clockReset()">Reset</button>
+    </div>
+
+    <div class="clock-settings">
+        <form>
+            <div>
+                <label for="clockSessionLength">Session length:</label>
+                <input type="number" name="sessionLength" id="clockSessionLength" class="js-clock-session-length" min="0" ng-model="clockSessionTime">
+            </div>
+
+            <div>
+                <label for="clockBreakLength">Break length:</label>
+                <input type="number" name="breakLength" id="clockBreakLength" class="js-clock-break-length" min="0" ng-model="clockBreakTime">
+            </div>
+
+        </form>
+    </div>
+</section>
+</div>
+
+<script src="../js/pomodoro.js"></script>
+</body>
+</html>

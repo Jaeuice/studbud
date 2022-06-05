@@ -1,0 +1,35 @@
+*{
+    font-family: 'Bely', sans-serif;
+}
+.pomodoro-clock-header, .pomodoro-clock-body {
+    width: 100%;
+}
+  
+.pomodoro-clock-header {
+    overflow: auto;
+    margin-bottom: 10px;
+}
+  
+.clock-timer {
+    transition: background-color linear 1s;
+    font-size: 3em;
+    margin: 10px 0;
+    padding: 10px 0;
+    background-color: #01415B;
+    color: aliceblue;
+  
+    &.clock-break-enabled {
+      background-color: #06870e;
+    }
+}
+  
+.clock-settings {
+    margin-top: 10px;
+  
+    .js-clock-session-length, .js-clock-break-length {
+      width: 50px;
+  
+      }
+}
+  
+  

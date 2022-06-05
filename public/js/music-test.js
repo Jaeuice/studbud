@@ -33,7 +33,7 @@ let mySongs =[
 const container = document.querySelector(".container");
 
 
-const mPic = document.getElementsByTagName("img");//Album picture
+const mPic = document.getElementById("img");//Album picture
 const mTit = container.querySelector(".content .name");//Music title
 const mPpl = container.querySelector(".content .artist");//Music artist
 
@@ -78,8 +78,9 @@ function loadMusic(index) {
   //Add .src t create the right file format into class
   //mPic.src = `../image/${mySongs[index - 1].img}.jpg`;
   //songs.src = `../songs/${mySongs[index - 1].audio}.mp3`;
-  mPic.src = "../image/"+mySongs[index - 1].img+".jpg";
-  songs.src = "../songs/"+mySongs[index - 1].img+".mp3";
+  mPic.setAttribute ('src' ,"./image/'+ mySongs[index - 1].img +' .jpg'");
+  //mPic.src = `"'/image/${mySongs[index - 1].img}.jpg'"`;
+  songs.src= `"'public/songs/${mySongs[index - 1].img}.mp3'"`;
   console.log(mTit.innerText);
   console.log(mPpl.innerText);
   console.log(mySongs[index - 1])

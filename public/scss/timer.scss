@@ -1,0 +1,62 @@
+:root{
+
+}
+
+*{
+    font-family: "Bely", sans-serif;
+}
+
+.header{
+    text-align: center;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+/* Set Stopwatch*/
+.watch {
+    text-align: center;
+    background-color: #01415B;
+    width:100%;
+    max-width: 360px;
+    margin: 20% auto;
+    padding: 20% auto;
+    border-radius: 15px;
+}
+
+.time{
+    font-size: 500%;
+    font-weight: 700;
+    color:aliceblue
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls button{
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    user-select: none;
+    cursor:pointer;
+
+    color:aliceblue;
+    background-color: #019587;
+    margin: 1rem 0.5rem;
+    padding: 0.5rem, 1rem;
+    border-radius: 23px;
+}
+button:hover {
+    opacity: 0.8;
+}
+button:active{
+    background-color: #019587;
+}
+
+
+
+
+
