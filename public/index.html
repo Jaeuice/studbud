@@ -71,20 +71,107 @@
       </div>
       
       <div class="right-box">
-        <div class="kanban">
-          <div class="kanban__column">
-            <div class="kanban__title">To do</div>
-            <button class="kanban__add" type="button">+ ADD TASK</button>
-            <div class="kanban__item">
-              <div contenteditable class="kanban__input">DECO2014</div>
-              <div class="kanban__shadow"></div>
+          <!-- The jumping window for users to add task and typing into simple input -->
+          <div class="modal" id="todo_form">
+            <div class="header">
+              <div class="title">Add Task</div>
+              <button class="btn close-modal">&times;</button>
             </div>
+            <div class="body">
+              <input type="text" id="todo_input" />
+              <input type="submit" value="Add Todo" id="todo_submit" />
             </div>
           </div>
-        </div>
+      
+          <!-- The jumping window for users to add doing task and typing into simple input -->
+          <div class="modal" id="doing_form">
+            <div class="header">
+              <div class="title">Add Task</div>
+              <button class="btn close-modal">&times;</button>
+            </div>
+            <div class="body">
+              <input type="text" id="doing_input" />
+              <input type="submit" value="Add Doing" id="doing_submit" />
+            </div>
+          </div>
+      
+          <!-- The jumping window for users to add done task and typing into simple input -->
+          <div class="modal" id="done_form">
+            <div class="header">
+              <div class="title">Add Task</div>
+              <button class="btn close-modal">&times;</button>
+            </div>
+            <div class="body">
+              <input type="text" id="done_input" />
+              <input type="submit" value="Add Done" id="done_submit" />
+            </div>
+            </div>
+          
+          <!-- The jumping window for users to create your own columns and Decide the name -->
+          <div class="modal" id="create_column">
+            <div class="header">
+              <div class="title">Create your own column</div>
+              <button class="btn close-modal">&times;</button>
+            </div>
+            <div class="body">
+              <input type="text" id="createC_input" />
+              <input type="submit" value="Create Column" id="create_C" />
+            </div>
+          </div>
+          
+          <!-- todo -->
+          <div class="todo-container">
+            <!--The first column called TO DO-->
+            <div class="status" id="todo">
+              <h1>TO DO</h1>
+              <button id="add_btn" data-target-modal="#todo_form">+ ADD TASK</button>
+              <div class="todo" draggable="true">
+                Let's create!
+                <span class="close">&times;</span>
+              </div>
+            </div>
+      
+            <!--The second column called DOING-->
+            <div class="status" id="doing">
+              <h1>DOING</h1>
+              <button id="add_btn" data-target-modal="#doing_form">+ ADD TASK</button>
+                      <div class="doing" draggable="true">
+                Let's create!
+                <span class="close">&times;</span>
+            </div>
+      
+            </div>
+      
+            <!--The third column called DONE-->
+            <div class="status" id="done">
+              <h1>DONE</h1>
+              <button id="add_btn" data-target-modal="#done_form">+ ADD TASK</button>
+                    <div class="done" draggable="true">
+                Let's create!
+                <span class="close">&times;</span>     
+            </div>
+      
+             </div>
+      
+      
+      
+            
+            <!--button area-->
+            <div class="bttn-area">
+              <button id="add_column" data-target-modal="#todo_form">+ ADD COLUMN</button>
+            </div>
+            
+            <!--<div class="status">
+              <h1>Completed</h1>
+            </div>
+          </div>-->
+          <div id="overlay"></div>
+      
+          
       </div>
-    </div>
+      </div>
       <script src="./js/main.js" type="module"></script>
+      <script src="./js/kanban.js"></script>
     </body>           
 </body>
 </html>
