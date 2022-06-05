@@ -78,6 +78,7 @@ mPpl.innerText = mySongs[index - 1].artist;
 //Add .src t create the right file format into class
 mPic.src = `../image/${mySongs[index - 1].img}.jpg`;
 songs.src = `../songs/${mySongs[index - 1].audio}.mp3`;
+//This codes does work on the replit. The node doesn't offer the same file path to refer.
 console.log(mTit.innerText);
 console.log(mPpl.innerText);
 console.log(index);
