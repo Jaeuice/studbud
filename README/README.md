@@ -22,8 +22,12 @@ As the before saying, dicitonary is secondary function in my design. The synonym
 ![Timer](/README/4.JPG)
 Compared the original one, in order to offer a more clear and obvious title and notification for users, I move the pomodoro timer with a button. 
 
-#### Music Player
+### Music Player
 ![Music player](/README/5.JPG)
 The previous one is too empty with large amouts of black. Mock phone pages provide a cleaner visual impact.You can switch songs, adjust the song's progress bar, choose a single loop list loop or shuffle.
 
+## Reference List
+1.Pomodoro timer, retrieved from https://bitbucket.org
+2.The Coding Lab, 2021, Stopwatch using HTML, CSS and JavaScript, retrieved from https://www.youtube.com/watch?v=2TLjO0MlBLg
+3.Web Dev Simplifed, 2019, How to Code A Better To-Do List - Tutorial, retrieved from https://www.youtube.com/watch?v=W7FaYfuwu70&t=2106s
 
